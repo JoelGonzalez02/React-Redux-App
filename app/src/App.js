@@ -1,19 +1,19 @@
-import React, { useState } from 'react';
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 import CardContainer from './components/cardContainer';
+import Header from './components/header';
+
+
 
 
 function App() {
 
   
   return (
-    <div className="App">
-      <div className='header'>
-        <h1>Baeow</h1>
-      </div>
-   <CardContainer />
-    </div>
+    <>
+      <Header />
+      <CardContainer />  
+   </>
   );
 }
 

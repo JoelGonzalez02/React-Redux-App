@@ -1,35 +1,35 @@
-import { GETTING_DOGS, 
-         GETTING_DOGS_SUCCESS,
-         GETTING_DOGS_FAILED, 
-         GETTING_CATS, 
-         GETTING_CATS_SUCCESS,
-         GETTING_CATS_FAILED} from '../actions/actions';
+import { GETTING_AUSSIES, 
+         GETTING_AUSSIES_SUCCESS,
+         GETTING_AUSSIES_FAILED, 
+         GETTING_HUSKIES, 
+         GETTING_HUSKIES_SUCCESS,
+         GETTING_HUSKIES_FAILED
+         } from '../actions/actions';
 
 
-const initialState = {
+export const initialState = {
     dogs: [],
-    cats: [],
     gettingDogs: false,
-    gettingCats: false,
-    error: ''
+    error: '',
+    breed: 'hound'
 }
 
 export const reducer = (state = initialState, action) => {
     switch(action.type) {
-        case GETTING_DOGS : 
+        case GETTING_AUSSIES : 
             return { ...state, gettingDogs: true, error: ''}
-        case GETTING_DOGS_SUCCESS :
+        case GETTING_AUSSIES_SUCCESS :
             return {...state, dogs: [...state.dogs, ...action.payload], gettingDogs: false }
-        case GETTING_DOGS_FAILED : 
-            return {...state, gettingDogs: false, error: 'There was an error getting your dog'}
-        case GETTING_CATS : 
-            return {...state, gettingCats: true, error: ''}
-        case GETTING_CATS_SUCCESS : 
-            return {...state, cats: [...state.cats, ...action.payload], gettingCats: false}
-        case GETTING_CATS_FAILED :
-            return {...state, gettingCats: false, error: 'There was an error getting your cat'}
-            
+        case GETTING_AUSSIES_FAILED : 
+            return {...state, gettingDogs: false, error: 'There was an error getting the Aussies'}
+        case GETTING_HUSKIES : 
+            return {...state, gettingDogs: true, error: ''}
+        case GETTING_HUSKIES_SUCCESS : 
+            return {...state, dogs: [...state.dogs, ...action.payload], gettingDogs: false}
+        case GETTING_HUSKIES_FAILED :
+            return {...state, gettingDogs: false , error: 'There was an error getting the Huskies'}     
         default: return state;
     }
 }
+
 
