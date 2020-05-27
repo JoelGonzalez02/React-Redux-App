@@ -19,9 +19,9 @@ import { connect } from 'react-redux';
     )
 }
 
-const mapStateToProps = state => {
-    return  state
+// const mapStateToProps = state => {
+//     return  state
        
-}
+// }
 
 export default Header;
