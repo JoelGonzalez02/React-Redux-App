@@ -11,10 +11,10 @@ import { connect } from 'react-redux';
         <div className='header'>
         <h1>My favorite dog breeds</h1>
       </div>
-      <div className='buttons'>
+      {/* <div className='buttons'>
           <button onClick={props.getAussies}>Australian Shepherd</button>
           <button onClick={props.getHuskies}>Husky</button>
-      </div>
+      </div> */}
     </>
     )
 }
@@ -24,4 +24,4 @@ const mapStateToProps = state => {
        
 }
 
-export default connect(mapStateToProps, {getAussies, getHuskies})(Header);
+export default Header;

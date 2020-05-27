@@ -8,7 +8,6 @@ const CardContainer = props => {
     useEffect(() => {
         props.getAussies();
         props.getHuskies();
-        props.getIbizans();
     }, []);
 
     return (
